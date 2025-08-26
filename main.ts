@@ -1,12 +1,12 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    if (receivedNumber == 10) {
-        radio.sendNumber(20)
+    if (receivedNumber == 17) {
+        basic.showIcon(IconNames.Yes)
     } else {
-        music.play(music.stringPlayable("- - - - - - - - ", 120), music.PlaybackMode.UntilDone)
+        basic.showIcon(IconNames.No)
     }
 })
-radio.setGroup(25)
+input.onButtonPressed(Button.A, function () {
+    radio.sendNumber(17)
+})
+radio.setGroup(101)
 radio.setTransmitPower(7)
-radio.sendNumber(90)
-radio.setGroup(147)
-radio.setTransmitPower(1)
